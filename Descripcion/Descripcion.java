@@ -2,7 +2,7 @@
 package ventanas;
 import java.awt.*;
 import javax.swing.*;
-
+import java.awt.event.*;
 public class Descripcion extends JFrame 
 {
     private JButton atras,ver,salir;
@@ -20,7 +20,7 @@ public class Descripcion extends JFrame
         setLocation(300,160);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Container c = getContentPane();
-        
+        Action event = new Action();
         c.setLayout( new GridLayout(1,3));
 //  Esta parte va a ingresar el texto        
         JPanel panel1 = new JPanel();
@@ -116,7 +116,8 @@ public class Descripcion extends JFrame
                           panel3_3.add(new JPanel());
                      }
             }
-           panel3.add(panel3_3);
+         salir.addActionListener(event);  
+         panel3.add(panel3_3);
         setVisible(true);
         c.add(panel1);
         c.add(panel2);
@@ -128,4 +129,18 @@ public class Descripcion extends JFrame
     {
     Descripcion c = new Descripcion();
     }
+
+public class Action implements ActionListener
+    {
+        public void actionPerformed(ActionEvent e)
+        {
+            
+            if(e.getSource()==salir)
+            cerrar();
+        }
+    }
+        public void cerrar()
+        {        
+         System.exit(0);
+        }
 }
