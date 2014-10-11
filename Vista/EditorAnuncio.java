@@ -10,11 +10,11 @@ import Modelo.Mensaje;
 import java.awt.Graphics;
 public class EditorAnuncio extends JFrame
 {
-   public  JButton aceptar;
+   public JButton aceptar;
    public JButton cancelar;
    public JButton ver;
-   public  JTextArea campoTexto;
-   public  JButton registro;
+   public JTextArea campoTexto;
+   public JButton registro;
    String[] base;
 
     public EditorAnuncio()
@@ -96,8 +96,7 @@ public class EditorAnuncio extends JFrame
     }       
     public void CerrarVentana()
     {        
-        this.setVisible(false);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setVisible(false);      
     }
     public String[] EnviarRegistro()
     {             

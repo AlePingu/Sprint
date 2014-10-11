@@ -13,30 +13,28 @@ import javax.swing.JPanel;
 import Modelo.Mensaje;
 import Vista.EditorAnuncio;
 import Vista.VentanaAnuncios;
-import Vista.VentanaPublicar;
+import Vista.VentanaOpcionesOrganizador;
+import Vista.VentanaRegistroPatrocinador;
 
 public class ControladorPrincipal implements ActionListener
 {
 	private VentanaAnuncios v = null;
-    private VentanaPublicar ve = null;
-    private EditorAnuncio editor = null;
+    private VentanaOpcionesOrganizador org = new VentanaOpcionesOrganizador();
+    private EditorAnuncio editor = new EditorAnuncio();
     private Mensaje m  = new Mensaje();
-    
+    private VentanaRegistroPatrocinador registro = new VentanaRegistroPatrocinador();
 	public ControladorPrincipal() 
-	{		
-	    ve = new VentanaPublicar();
-	    editor = new EditorAnuncio();
-		editor.visible();
-		VentanaEditoAnuncioHabilitarBotones();
-		//VentanaPublicarHabilitarBotones();
-		
+	{			    	    		
+		org.visible();
+		VentanaOrganizadorHabilitarBotones();		
 	}
-	private void VentanaPublicarHabilitarBotones()
+	private void VentanaOrganizadorHabilitarBotones()
 	{
-		this.ve.agregarCurso.addActionListener(this);
-		this.ve.agregarAnuncio.addActionListener(this);
-		this.ve.retirarAnuncio.addActionListener(this);
-		this.ve.retirarCurso.addActionListener(this);
+		this.org.anuncio.addActionListener(this);
+		this.org.curso.addActionListener(this);
+		this.org.retirarA.addActionListener(this);
+		this.org.retirarC.addActionListener(this);	
+		this.org.patrocinador.addActionListener(this);
 	}
 	private void VentanaEditoAnuncioHabilitarBotones()
 	{
@@ -45,18 +43,38 @@ public class ControladorPrincipal implements ActionListener
 		this.editor.registro.addActionListener(this);		
 		this.editor.ver.addActionListener(this);
 	}
+	private void VentanaRegistroPtracinadorHabilitarBotones()
+	{
+		this.registro.registrar.addActionListener(this);
+		this.registro.atras.addActionListener(this);
+	}
 	@Override
 	public void actionPerformed(ActionEvent e)
 	{
 		Object boton = e.getSource();
 		
-		if (boton == this.ve.agregarAnuncio)
+		if (boton == this.org.anuncio)
 		{   		
-			ve.setVisible(false);		    		   
+			org.setVisible(false);
+			editor = new EditorAnuncio();
+			editor.visible();		
+			VentanaEditoAnuncioHabilitarBotones();				
+		}
+		if (boton == this.org.patrocinador)
+		{   		
+			org.setVisible(false);
+			registro.visible();		
+			VentanaRegistroPtracinadorHabilitarBotones();				
+		}
+		if(boton == this.registro.atras)
+		{
+			registro.setVisible(false);
+			org.visible();
 		}
 		if(boton == this.editor.cancelar)
 		{
             editor.CerrarVentana();
+            org.setVisible(true);
 		}
         if(boton==this.editor.registro)
         {          	 
