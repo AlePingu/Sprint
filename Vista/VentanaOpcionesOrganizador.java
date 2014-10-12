@@ -5,6 +5,8 @@ import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import org.jvnet.substance.SubstanceLookAndFeel;
+
 public class VentanaOpcionesOrganizador extends JDialog 
 {
 	public JButton anuncio,retirarA,retirarC,curso,patrocinador;
@@ -17,7 +19,7 @@ public class VentanaOpcionesOrganizador extends JDialog
 		setSize(550,500);
 		setLocation(100,150);
 		getContentPane().setLayout(null);
-		
+		SubstanceLookAndFeel.setSkin("org.jvnet.substance.skin.SaharaSkin");
 		principal = new JPanel();
 		principal.setBounds(0,0,534,462);
 		principal.setLayout(null);		
