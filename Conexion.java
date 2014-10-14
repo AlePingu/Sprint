@@ -34,6 +34,7 @@ public class Conexion
 	{
 		try
 		{
+			s.executeQuery(SELECT cerrarSesion());
 			s.close();
 			conector.close();
 		}catch(Exception e)
