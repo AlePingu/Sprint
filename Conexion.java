@@ -9,9 +9,12 @@ public class Conexion
 		try
 		{
 			Class.forName("org.postgresql.Driver");
-			System.out.println("1");
 			conector = DriverManager.getConnection("jdbc:postgresql://localhost:5432/cursos", "postgres", "publica");
 			s = conector.createStatement();
+			ResultSet r = s.executeQuery("SELECT * FROM patrocinador");
+			r.next();
+			String asd = r.getString(2);
+			System.out.println(asd);
 		}catch(Exception e)
 		{
 			System.out.println("Error de coneccion");

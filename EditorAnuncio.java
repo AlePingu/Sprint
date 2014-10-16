@@ -94,6 +94,7 @@ public class EditorAnuncio extends JFrame
         {
             public void actionPerformed(ActionEvent e)
             {
+                System.out.println("hola");
                 control.registrarAnuncio(campoTexto.getText(), conector);
             }
         }
@@ -102,6 +103,7 @@ public class EditorAnuncio extends JFrame
         {
             public void actionPerformed(ActionEvent e)
             {
+                System.out.println("hola");
                 control.activarVentanaAnuncios(conector);
                 CerrarVentana();
             }
