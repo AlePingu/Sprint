@@ -1,5 +1,3 @@
-package Vista;
-
 import javax.lang.model.element.Element;
 import javax.swing.*;
 import Modelo.Mensaje;

@@ -1,5 +1,3 @@
-package Vista;
-
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JPanel;

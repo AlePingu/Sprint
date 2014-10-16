@@ -1,10 +1,11 @@
-
-package Vista;
 import java.awt.*;
 import javax.swing.*;
 
 public class Descripcion extends JFrame 
 {
+
+    //private Controlador control;
+    //private Conexion conector;
     private JButton atras,ver,salir;
     private JList listaCursos;
     private JTextArea detalles;
@@ -16,6 +17,8 @@ public class Descripcion extends JFrame
    
     {
         super("Descripcion de los Cursos");
+        //control = controlador;
+        //conector = conexion;
         setSize(800,500);
         setLocation(300,160);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -126,6 +129,8 @@ public class Descripcion extends JFrame
     }
     public static void main(String []args)
     {
+      System.out.println("Yeah");
     Descripcion c = new Descripcion();
+    System.out.println("Maracuyea");
     }
 }
