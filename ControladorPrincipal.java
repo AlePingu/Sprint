@@ -1,5 +1,3 @@
-package Controlador;
-
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
