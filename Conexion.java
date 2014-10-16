@@ -9,7 +9,6 @@ public class Conexion
 		try
 		{
 			Class.forName("org.postgresql.Driver");
-			System.out.println("1");
 			conector = DriverManager.getConnection("jdbc:postgresql://localhost:5432/cursos", "postgres", "publica");
 			s = conector.createStatement();
 		}catch(Exception e)

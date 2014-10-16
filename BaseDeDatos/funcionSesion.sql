@@ -20,12 +20,12 @@ $BODY$
 LANGUAGE plpgsql;
 
 CREATE OR REPLACE FUNCTION cerrarSesion()
-RETURNS boolean AS
+RETURNS NULL AS
 $BODY$
 DECLARE
 BEGIN
 UPDATE SESION SET activo = false WHERE pid = pg_backend_pid();
-RETURN true;
+RETURN NULL;
 END;
 $BODY$
 LANGUAGE plpgsql;

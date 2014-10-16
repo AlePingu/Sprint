@@ -1,3 +1,5 @@
+package Vista;
+
 
 /**
  * Write a description of class ImagenFondo here.

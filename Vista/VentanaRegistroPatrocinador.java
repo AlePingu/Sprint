@@ -1,3 +1,5 @@
+package Vista;
+
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JPanel;
