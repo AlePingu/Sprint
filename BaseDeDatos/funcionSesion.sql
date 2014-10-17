@@ -2,8 +2,8 @@ CREATE OR REPLACE FUNCTION iniciarSesion(VARCHAR, VARCHAR)
 RETURNS boolean AS
 $BODY$
 DECLARE
-nombre ALIAS FOR $1,
-pass ALIAS FOR $2, 
+nombre ALIAS FOR $1;
+pass ALIAS FOR $2;
 correcto boolean;
 encontrado integer;
 BEGIN
