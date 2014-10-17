@@ -1,0 +1,1 @@
+Ya esta todo,solo debes cambiar y enviarme como parametros los Statement,debes controlar que cuando se aprete un boton este debe hacer la consulta con el nombre de ese boton...listo ,vas a disculpar la demora.
